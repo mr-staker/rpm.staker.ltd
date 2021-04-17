@@ -13,46 +13,32 @@
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <title>RPM Repository - </title>
-<meta name="description" content="Mr Staker RPM repository - the place were we publish or Red Hat/Oracle Linux builds.">
-<link rel="canonical" href="https://rpm.staker.ltd/">
+  <title>Signing Key Rotation - RPM Repository</title>
+<meta name="description" content="Describes our signing key rotation.">
+<link rel="canonical" href="https://rpm.staker.ltd/docs/advanced-topics/signing-key-rotation/">
 <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:image" content="/android-chrome-512x512.png">
-    <meta name="twitter:title" content="Mr Staker RPM repository">
-<meta name="twitter:description" content="Mr Staker RPM repository - the place were we publish or Red Hat/Oracle Linux builds.">
+    <meta name="twitter:title" content="Signing Key Rotation">
+<meta name="twitter:description" content="Describes our signing key rotation.">
 
 <meta name="twitter:site" content="@MrStakerLTD">
 <meta name="twitter:creator" content="@MrStakerLTD">
 
-<meta property="og:title" content="Mr Staker RPM repository">
-<meta property="og:description" content="Mr Staker RPM repository - the place were we publish or Red Hat/Oracle Linux builds.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="/">
+<meta property="og:title" content="Signing Key Rotation">
+<meta property="og:description" content="Describes our signing key rotation.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/docs/advanced-topics/signing-key-rotation/">
 
   <meta property="og:image" content="/android-chrome-512x512.png"/>
-    <meta property="og:updated_time" content="2020-10-06T08:47:36+00:00">
+    <meta property="article:published_time" content="2020-10-06T08:48:57+00:00">
+  <meta property="article:modified_time" content="2020-10-06T08:48:57+00:00">
   <meta property="og:site_name" content="RPM Repository">
 
 <meta property="article:publisher" content="https://www.facebook.com/MrStakerLTD">
 <meta property="article:author" content="https://www.facebook.com/MrStakerLTD">
 <meta property="og:locale" content="en_GB">
 
-<link rel="alternate" type="application/rss&#43;xml" href="https://rpm.staker.ltd/index.xml">
 <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "url": "\/",
-      "name": "RPM Repository",
-      "logo": "\/android-chrome-512x512.png",
-      "sameAs": [
-        "https:\/\/twitter.com\/MrStakerLTD",
-        "https:\/\/www.linkedin.com\/company\/mr-staker",
-        "https:\/\/github.com\/mr-staker"
-      ]
-    }
-    </script>
-  <script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "BreadcrumbList",
@@ -61,6 +47,21 @@
         "position":  1 ,
         "name": "Home",
         "item": "https:\/\/rpm.staker.ltd\/"
+    },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "name": "Docs",
+        "item": "https:\/\/rpm.staker.ltd\/\/docs\/"
+    },{
+        "@type": "ListItem",
+        "position":  4 ,
+        "name": "Advanced Topics",
+        "item": "https:\/\/rpm.staker.ltd\/\/docs\/advanced-topics\/"
+    },{
+        "@type": "ListItem",
+        "position":  5 ,
+        "name": "Signing Key Rotation",
+        "item": "https:\/\/rpm.staker.ltd\/\/docs\/advanced-topics\/signing-key-rotation\/"
     }]
 }
 </script>
@@ -72,7 +73,7 @@
 <link rel="manifest" href="https://rpm.staker.ltd/site.webmanifest">
   
 </head>
-  <body class="home">
+  <body class="docs single">
     <div class="header-bar fixed-top"></div>
 <header class="navbar fixed-top navbar-expand-md navbar-light">
   <div class="container">
@@ -110,27 +111,63 @@
 			<nav class="docs-links" aria-label="Main navigation">
 				<h3>Intro</h3>
   <ul class="list-unstyled">
-    <li><a class="docs-link active" href="https://rpm.staker.ltd/docs/intro/install-repository/">Install Repository</a></li>
-    <li><a class="docs-link active" href="https://rpm.staker.ltd/docs/intro/uninstall-repository/">Uninstall Repository</a></li>
+    <li><a class="docs-link" href="https://rpm.staker.ltd/docs/intro/install-repository/">Install Repository</a></li>
+    <li><a class="docs-link" href="https://rpm.staker.ltd/docs/intro/uninstall-repository/">Uninstall Repository</a></li>
     </ul>
   <h3>Advanced Topics</h3>
   <ul class="list-unstyled">
     <li><a class="docs-link active" href="https://rpm.staker.ltd/docs/advanced-topics/signing-key-rotation/">Signing Key Rotation</a></li>
-    <li><a class="docs-link active" href="https://rpm.staker.ltd/docs/advanced-topics/infrastructure/">Infrastructure</a></li>
+    <li><a class="docs-link" href="https://rpm.staker.ltd/docs/advanced-topics/infrastructure/">Infrastructure</a></li>
     </ul>
   
 			</nav>
 		</div>
-		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
-		
-			<h1>Mr Staker RPM repository</h1>
-			<p class="lead">We use this repository to publish our Red Hat/Oracle Linux builds.</p>
-			<p>The purpose of this repository is to publish our builds for the networks we support (e.g Elrond). All of the software published on this repository has been built from publicly availalable source code available under OSI-approved licences. We are also making available our recipes for building these packages on or GitHub organisation.</p>
+		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			<div class="page-links">
+    <h3>On this page</h3>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#rotation-policy">Rotation policy</a></li>
+    <li><a href="#rotation-procedure">Rotation procedure</a></li>
+  </ul>
+</nav>
+  </div>
 
-			<div class="col-lg-9 col-xl-8">
-				<a class="btn btn-primary btn-lg px-4 mb-2" href="https://rpm.staker.ltd/docs/intro/install-repository/" role="button">Get started</a>
+		</nav>
+		<main class="docs-content col-lg-11 col-xl-9">
+		
+			<h1>Signing Key Rotation</h1>
+			<p class="lead">Describes our signing key rotation.</p>
+			<h2 id="rotation-policy">Rotation policy<a href="#rotation-policy" class="anchor" aria-hidden="true">#</a> </h2>
+<p>Our keys have a cryptoperiod of 3 years which is the maximum recommended by <a href="https://csrc.nist.gov/csrc/media/publications/sp/800-57-part-1/rev-3/archive/2012-07-10/documents/draft_sp800-57-part1-rev3_may2011.pdf">NIST SP 800-57</a>. This is significantly shorter than most signing keys used by distribution/software maintainers, hence our use of bundled keyring via the <code>staker-repo</code> package to support key rotation.</p>
+<p>In practical terms a key isn&rsquo;t used to sign releases for the full 3 years period as the key rotation needs transition periods. Therefore, the key lifecycle is as follows:</p>
+<ul>
+<li>1 year in seed mode. The key is created, but it is not actively signing/validating releases. The purpose is to provide some overlap with the key which is currently used for signing and validation (i.e the active key) and allow this key to be installed before being actively used.</li>
+<li>1 year in active (sign/validate) mode. This is the key which is currently used to sign releases.</li>
+<li>1 year in validate mode. This is a previously used active key which can still verify signatures, but no new releases are produced using this key.</li>
+</ul>
+<p>The only exception to this rule is the 1st key ever used for signing releases which shall be in active mode for 2 years. There&rsquo;s no key to fulfil the seed mode for the 1st year.</p>
+<h2 id="rotation-procedure">Rotation procedure<a href="#rotation-procedure" class="anchor" aria-hidden="true">#</a> </h2>
+<p>You need to update the <code>staker-repo</code> package at least once per year in order to get a keyring which contains the signing key that shall be active for future releases. Should you fail to do so, you must follow the repository installation procedure and go through the bootstrap steps again to fix your installation of this repository.</p>
+
+			<div class="docs-navigation d-flex justify-content-between">
+	
+	<a href="https://rpm.staker.ltd/docs/intro/uninstall-repository/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					&larr; Uninstall Repository
+				</div>
 			</div>
-			
+		</a>
+	<a class="ms-auto" href="https://rpm.staker.ltd/docs/advanced-topics/infrastructure/">
+			<div class="card my-1">
+				<div class="card-body py-2">
+					Infrastructure &rarr;
+				</div>
+			</div>
+		</a>
+	</div>
+
 		</main>
 	</div>
 

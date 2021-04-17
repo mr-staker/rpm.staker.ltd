@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Advanced Topics on </title>
+    <link>https://rpm.staker.ltd/docs/advanced-topics/</link>
+    <description>Recent content in Advanced Topics on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="https://rpm.staker.ltd/docs/advanced-topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Signing Key Rotation</title>
+      <link>https://rpm.staker.ltd/docs/advanced-topics/signing-key-rotation/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
+      
+      <guid>https://rpm.staker.ltd/docs/advanced-topics/signing-key-rotation/</guid>
+      <description>Rotation policy Our keys have a cryptoperiod of 3 years which is the maximum recommended by NIST SP 800-57. This is significantly shorter than most signing keys used by distribution/software maintainers, hence our use of bundled keyring via the staker-repo package to support key rotation.
+In practical terms a key isn&amp;rsquo;t used to sign releases for the full 3 years period as the key rotation needs transition periods. Therefore, the key lifecycle is as follows:</description>
+    </item>
+    
+    <item>
+      <title>Infrastructure</title>
+      <link>https://rpm.staker.ltd/docs/advanced-topics/infrastructure/</link>
+      <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
+      
+      <guid>https://rpm.staker.ltd/docs/advanced-topics/infrastructure/</guid>
+      <description>Design The RPM repositories themselves are nothing fancy. All they require is a basic HTTP server to be delivered.
+Our repositories are published as GitHub pages and delivered via Cloudflare. This allows us to provide them at no cost for the community besides our use cases.
+This has a few potential drawbacks:
+ While a CDN improves the performance and allows us to stay within the GitHub quota, every repository update requires a cache purge on Cloudflare.</description>
+    </item>
+    
+  </channel>
+</rss>
