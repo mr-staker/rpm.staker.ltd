@@ -13,7 +13,8 @@
       <pubDate>Tue, 06 Oct 2020 08:48:57 +0000</pubDate>
       
       <guid>https://rpm.staker.ltd/docs/intro/install-repository/</guid>
-      <description>Bootstrap sudo mkdir -p /etc/staker-repo curl &#39;https://keybase.io/saltwaterc/pgp_keys.asc?fingerprint=8E0D38C40089F860005989ACFD6652320303527F&#39; | sudo tee /etc/staker-repo/release-signing-key-2021.gpg.pem cat &amp;lt;&amp;lt; &#39;EOF&#39; | sudo tee /etc/yum.repos.d/staker.repo [staker] name=Mr Staker rpm repository baseurl=https://rpm.staker.ltd/$basearch/ gpgkey=file:///etc/staker-repo/release-signing-key-2021.gpg.pem gpgcheck=1 repo_gpgcheck=1 enabled=1 EOF  Install repository package sudo yum -y install staker-repo # you should see this at the end Key imported successfully Running transaction check Transaction check succeeded. Running transaction test Transaction test succeeded. Running transaction Preparing : 1/1 Installing : staker-repo-21.04.01-1.x86_64 1/1 Verifying : staker-repo-21.</description>
+      <description>Bootstrap cat &amp;lt;&amp;lt; &#39;EOF&#39; | sudo tee /etc/yum.repos.d/staker.repo [staker] name=Mr Staker rpm repository baseurl=https://rpm.staker.ltd/$basearch/ gpgkey=https://keybase.io/saltwaterc/pgp_keys.asc?fingerprint=8E0D38C40089F860005989ACFD6652320303527F gpgcheck=1 repo_gpgcheck=1 enabled=1 EOF  Install repository package sudo yum -y install staker-repo  The repository package bundles the following:
+ Exported GPG public key used by yum and rpm to verify the repository metadata signature and packages signatures. A configuration file /etc/yum.repos.d/staker.repo which shall be updated in the future to do our key rotation process.</description>
     </item>
     
     <item>
