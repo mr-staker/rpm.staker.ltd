@@ -64,3 +64,8 @@ task :distclean do
   sh 'bfg --delete-files *.deb'
   sh 'bfg --delete-files *.rpm'
 end
+
+desc 'Print size of git repo'
+task :size do
+  sh 'du -sh .git'
+end
