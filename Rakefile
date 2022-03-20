@@ -69,3 +69,8 @@ desc 'Print size of git repo'
 task :size do
   sh 'du -sh .git'
 end
+
+desc 'Export repo'
+task :export do
+  sh "repo-mgr export --repo #{repo}"
+end
