@@ -25,7 +25,11 @@ end
 
 desc 'Clean reports'
 task :clean do
-  rm_rf '..bfg-report'
+  repo = File.basename(__dir__)
+
+  Dir.chdir('..') do
+    rm_rf "#{repo}.bfg-report"
+  end
 end
 
 desc 'Force push changes'
